@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests d'addition
-                     sh 'python3 -m xmlrunner discover -s tests -p test_add.py -o junit-xml'
+                     sh 'pytest -v tests/test_add.py > resultats_tests.txt'
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests de soustraction
-                    s sh 'python3 -m xmlrunner discover -s tests -p test_sous.py -o junit-xml'
+                    sh 'pytest -v tests/test_sous.py > resultats_tests.txt'
                 }
             }
         }
@@ -40,7 +40,7 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests de multiplication
-                     sh 'python3 -m xmlrunner discover -s tests -p test_mult.py -o junit-xml'
+                     sh 'pytest -v tests/test_mult.py > resultats_tests.txt'
                 }
             }
         }
@@ -48,7 +48,7 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests de division
-                     sh 'python3 -m xmlrunner discover -s tests -p test_div.py -o junit-xml'
+                     sh 'pytest -v tests/test_div.py > resultats_tests.txt'
                 }
             }
         }

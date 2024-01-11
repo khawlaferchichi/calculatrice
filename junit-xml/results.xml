@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.133" timestamp="2024-01-11T23:54:14.075212" hostname="khawla-HP-Laptop-15-da0xxx"><testcase classname="" name="tests.test_add" time="0.000"><error message="collection failure">ImportError while importing test module '/home/khawla/Bureau/app_python/tests/test_add.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_add.py:2: in &lt;module&gt;
+    from calculatrice import additionner
+E   ModuleNotFoundError: No module named 'calculatrice'</error></testcase></testsuite></testsuites>
