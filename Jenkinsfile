@@ -2,7 +2,7 @@
 pipeline {
     agent any
     tools{
-    pathon = 'python'
+    python = 'python'
     }
     stages {
         stage('Checkout') {
