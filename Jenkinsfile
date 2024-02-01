@@ -22,8 +22,7 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests d'addition
-                    sh '/home/khawla/.local/bin/pytest'
-                     sh 'pytest -v tests/test_add.py > resultats_tests.txt'
+                   sh 'pytest -v tests/test_add.py | tee resultats_tests.txt'
                 }
             }
         }
@@ -32,8 +31,8 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests de soustraction
-                    sh '/home/khawla/.local/bin/pytest'
-                    sh 'pytest -v tests/test_sous.py > resultats_tests.txt'
+                    sh 'pytest -v tests/test_sous.py | tee resultats_tests.txt'
+                    
                 }
             }
         }
@@ -42,8 +41,7 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests de multiplication
-                    sh '/home/khawla/.local/bin/pytest'
-                     sh 'pytest -v tests/test_mult.py > resultats_tests.txt'
+                  sh 'pytest -v tests/test_mult.py | tee resultats_tests.txt'
                 }
             }
         }
@@ -51,8 +49,7 @@ pipeline {
             steps {
                 script {
                     // Exécuter les tests de division
-                     sh '/home/khawla/.local/bin/pytest'
-                     sh 'pytest -v tests/test_div.py > resultats_tests.txt'
+                     sh 'pytest -v tests/test_div.py | tee resultats_tests.txt'
                 }
             }
         }
