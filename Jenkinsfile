@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Installer les dépendances
-                    sh 'pip install -r requirements.txt'
+                    sh 'python3 calculatrice.py'
                 }
             }
         }
